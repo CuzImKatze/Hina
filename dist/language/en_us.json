@@ -1,0 +1,15 @@
+{
+    "requested": "Requested by ",
+    "noperms": "You don't have the required Permissions!",
+    "noperms.title": "Hina - No Permission",
+    "help.title": "Hina - Help",
+    "botinfo.title": "Hina - Bot Informations",
+    "moderation.nomember": "Please tagg a member!",
+    "moderation.noreason": "Please enter a reason!",
+    "moderation.norole": "Please enter a role name!",
+    "moderation.kick": "Are you sure that you wan to kick: ",
+    "moderation.ban": "Are you sure that you wan to ban: ",
+    "moderation.kick2": " for the reason: ",
+    "moderation.reason": "Reason"
+
+}

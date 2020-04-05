@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "dist",
+        "removeComments": true,
+        "strict": false, 
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "inlineSourceMap": true,
+        "resolveJsonModule": true
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+
+}
