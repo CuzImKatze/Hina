@@ -4,6 +4,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     if(message.member.id == "292588280304893952") {
         let embed = new MessageEmbed()
         .setTitle("Hina - Update")
+        .setColor("#3b7fff")
         .setDescription("Updating....")
         .setFooter("Update by " + message.author.username)
         .setTimestamp()
@@ -12,6 +13,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
             if(err) {
                 let emb1 = new MessageEmbed()
                 .setTitle("Hina Update")
+                .setColor("#3b7fff")
                 .setDescription("Error: " + out)
                 .setFooter("Update by " + message.author.username)
                 .setTimestamp()
@@ -19,6 +21,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
             } else {
                 let embed = new MessageEmbed()
                 .setTitle("Hina - Update")
+                .setColor("#3b7fff")
                 .setDescription(`Restarting..... | Log: ${out} | ${stderr} | ${err}`)
                 .setFooter("Update by " + message.author.username)
                 .setTimestamp()

@@ -1,5 +1,6 @@
 import { MessageEmbed, ReactionCollector } from 'discord.js'
 module.exports.run = async (prefix, cmd, client, args, message) => {
+    let db = client.con;
     if(! message.member.hasPermission("KICK_MEMBERS")) {
         let embed = new MessageEmbed()
         .setTitle("Hina - Kick")
@@ -30,9 +31,19 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
         .addField("Moderator", message.author.username)
         .setFooter(await client.string(message.guild.id, "requested") + message.author.username)
         .setTimestamp()
-        message.channel.send(embed)
-        reply.delete()
-        message.guild.member(target).kick(reason)
+        db.query("SELECT * FROM `settings` WHERE guildid = ?", [message.guild.id], async (error, result) => {
+            if(result.length == 0) return
+            if(result.lenght == "none") { 
+            message.channel.send(embed)
+            reply.delete()
+             message.guild.member(target).kick(reason)
+            } else {
+                let ch = message.guild.channels.cache.get(result[0].modlog);
+                ch.send(embed)
+            reply.delete()
+             message.guild.member(target).kick(reason)
+            }
+         })
     })
     let collect = reply.createReactionCollector((reaction, user) => reaction.emoji.name === "❌" && user.id == message.author.id, { time: 12000 });
     collect.on("collect", async (r) => {

@@ -45,4 +45,4 @@ const cmdDir = fs.readdirSync("./commands/");
             client.on(eventName, event.bind(null, client));
         })
     })
-    client.login(process.env.TOKEN); 
+    client.login(process.env.TOKEN);

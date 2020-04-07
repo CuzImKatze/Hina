@@ -16,7 +16,7 @@ class HinaClient extends Discord.Client {
         this.groups = [];
         this.commands = new Discord.Collection();
         this.con = con;
-        this.langs = ["en_us"]
+        this.langs = ["en_us", "de_de"]
 
     }
     async string(guild, string) {
