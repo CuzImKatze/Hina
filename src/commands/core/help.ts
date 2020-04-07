@@ -6,7 +6,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     .setColor("#3b7fff")
     .addField("⚙Core", genHelpCategory("core", prefix))
     .addField("🎉Fun", genHelpCategory("fun", prefix))
-    //.addField("🔨Utilities", genHelpCategory("utilities", prefix))
+    .addField("🔨Utilities", genHelpCategory("utilities", prefix))
     .addField("💵Economy", genHelpCategory("economy", prefix))
     //.addField("🌐Globalchat",genHelpCategory("globalchat", prefix) )
     //.addField("📦Mysterybox", genHelpCategory("mysterybox", prefix))
@@ -15,7 +15,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     embed.addField("⚖Moderation", genHelpCategory("moderation", prefix))
   }
   if(message.member.hasPermission("MANAGE_GUILD")) {
-    embed.addField("🛠Configuration", genHelpCategory("configuartion", prefix))
+    embed.addField("🛠Configuration", genHelpCategory("configuration", prefix))
   }
   if(message.member.id == "292588280304893952") {
     embed.addField("💻Developer", genHelpCategory("developer", prefix))
