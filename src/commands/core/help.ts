@@ -6,7 +6,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     .setColor("#3b7fff")
     .addField("⚙Core", genHelpCategory("core", prefix))
     .addField("🎉Fun", genHelpCategory("fun", prefix))
-    .addField("🔨Utilities", genHelpCategory("utilities", prefix))
+    .addField("🔨Utilities", genHelpCategory("utilties", prefix))
     .addField("💵Economy", genHelpCategory("economy", prefix))
     //.addField("🌐Globalchat",genHelpCategory("globalchat", prefix) )
     //.addField("📦Mysterybox", genHelpCategory("mysterybox", prefix))
