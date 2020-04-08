@@ -71,7 +71,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
                     db.query("INSERT INTO settings (id, leavechannel) VALUES(?, ?)", [message.guild.id, text.id])
                     return message.react("✅")
                 }
-                let text = args.join(2).slice(" ")
+                let text = args.slice(2).join(" ")
                 db.query("INSERT INTO settings (id, " + value2 +") VALUES(?, ?)", [message.guild.id, text])
                 return message.react("✅")
             } else {
@@ -115,7 +115,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
                     db.query("UPDATE settings SET leavechannel = ? WHERE id = ?", [text.id, message.guild.id])
                     return message.react("✅")
                 }
-                let text = args.join(2).slice(" ")
+                let text = args.slice(2).join(" ")
                 if(!text) return message.channel.send(await client.string(message.guild.id, "config.notext"))
                 db.query("UPDATE settings SET " + value2 + " = ? WHERE id = ?", [text, message.guild.id])
                 return message.react("✅")
@@ -135,7 +135,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
                     db.query("UPDATE settings SET leavechannel = ? WHERE id = ?", ["none", message.guild.id])
                     return message.react("✅")
                 }
-                db.query("INSERT INTO settings (id, " + value2 +") VALUES(?, ?)", [message.guild.id, "none"])
+                db.query("UPDATE settings SET " + value2 +" WHERE guildid = ?", ["none", message.guild.id])
                 return message.react("✅")
         }
       }
