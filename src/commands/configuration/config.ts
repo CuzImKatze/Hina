@@ -54,13 +54,13 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
         if(result.length == 0) {
             if(value.includes("set")) {
                 if(value2.includes("modlog")) {
-                    let text = message.mentions.channel.first()
+                    let text = message.mentions.channels.first()
                     if(!text) return message.channel.send(await client.string(message.guild.id, "config.nochannel"))
                     db.query("INSERT INTO settings (id, modlog) VALUES(?, ?)", [message.guild.id, text.id])
                     return message.react("✅")
                 }
                 if(value2.includes("welcomechannel")) {
-                    let text = message.mentions.channel.first()
+                    let text = message.mentions.channels.first()
                     if(!text) return message.channel.send(await client.string(message.guild.id, "config.nochannel"))
                     db.query("INSERT INTO settings (id, welcomechannel) VALUES(?, ?)", [message.guild.id, text.id])
                     return message.react("✅")
@@ -98,13 +98,13 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
 
             if(value.includes("set")) {
                 if(value2.includes("modlog")) {
-                    let text = message.mentions.channel.first()
+                    let text = message.mentions.channels.first()
                     if(!text) return message.channel.send(await client.string(message.guild.id, "config.nochannel"))
                     db.query("UPDATE settings SET modlog = ? WHERE id = ?", [text.id, message.guild.id])
                     return message.react("✅")
                 }
                 if(value2.includes("welcomechannel")) {
-                    let text = message.mentions.channel.first()
+                    let text = message.mentions.channels.first()
                     if(!text) return message.channel.send(await client.string(message.guild.id, "config.nochannel"))
                     db.query("UPDATE settings SET welcomechannel = ? WHERE id = ?", [text.id, message.guild.id])
                     return message.react("✅")
