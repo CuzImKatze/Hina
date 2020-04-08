@@ -1,6 +1,6 @@
 import { MessageEmbed } from 'discord.js'
 module.exports.run = async (prefix, cmd, client, args, message) => {
-    let db = client.co;
+    let db = client.con;
     if(!message.member.hasPermission("ADMINISTRATOR")) {
         let embed = new MessageEmbed()
         .setColor("#3b7fff")
@@ -13,7 +13,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     let lang = args[0]
     if(!lang) return message.channel.send(await client.string(message.guild.id, "language.nolang"))
     if(!client.langs.includes(lang)) return message.channel.send(await client.string(message.guild.id, "language.nolang"))
-    db.query("SELECT * FROM `lang` WHERE guildid = ?", [message.guild.id], async (error, result) =>{
+    db.query("SELECT * FROM `lang` WHERE guildid = ?", [message.guild.id], async (error, result) => {
         if(result.length == 0) {
             db.query("INSERT INTO settings(guildid, lang) VALUES(?, ?)", [message.guild.id, lang]);
             let embed = new MessageEmbed()
