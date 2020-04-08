@@ -16,8 +16,8 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     let value2 = args[1]
     if(!values.includes(value)) {
     db.query("SELECT * FROM `settings` WHERE id = ?", [message.guild.id], async (error, result) => {
+        console.log(error)
         if(result.length == 0) {
-            db.query("INSERT INTO settings (id) VALUES (?)", [message.guild.id])
             let embed = new MessageEmbed()
             .setTitle(`Hina - Config: ${message.guild.name}`)
             .setColor("#3b7fff")
@@ -51,7 +51,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
   } else {
       if(!values2.includes(value2)) return message.channel.send(await client.string(message.guild.id, "config.error"))
     db.query("SELECT * FROM `settings` WHERE id = ?", [message.guild.id], async (error, result) => {
-        if(result.length == 0) {
+        if(result.length != 1) {
             if(value.includes("set")) {
                 if(value2.includes("modlog")) {
                     let text = message.mentions.channels.first()
@@ -135,7 +135,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
                     db.query("UPDATE settings SET leavechannel = ? WHERE id = ?", ["none", message.guild.id])
                     return message.react("✅")
                 }
-                db.query("UPDATE settings SET " + value2 +" WHERE guildid = ?", ["none", message.guild.id])
+                db.query("UPDATE settings SET " + value2 +" WHERE id = ?", ["none", message.guild.id])
                 return message.react("✅")
         }
       }
