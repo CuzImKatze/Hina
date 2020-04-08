@@ -53,8 +53,8 @@ module.exports.run = (prefix, cmd, client, args, message) => __awaiter(void 0, v
                     .addField("Modlog", result[0].modlog)
                     .addField("WelcomeChannel", result[0].welcomechannel)
                     .addField("LeaveChanel", result[0].leavechannel)
-                    .addField("WelcomeMessage", result[0].welcomechannel)
-                    .addField("LeaveMessage", result[0].leavechannel)
+                    .addField("WelcomeMessage", result[0].welcomemessage)
+                    .addField("LeaveMessage", result[0].leavemessage)
                     .setFooter((yield client.string(message.guild.id, "requested")) + message.author.username)
                     .setTimestamp();
                 return message.channel.send(embed);

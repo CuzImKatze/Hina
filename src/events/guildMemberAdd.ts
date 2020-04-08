@@ -6,7 +6,7 @@ module.exports = async (client, member) => {
         if(result[0].welcomechannel == "none") {
             return
         } else {
-            let wec = member.guild.channels.get(result[0].welcomechannel);
+            let wec = member.guild.channels.cache.get(result[0].welcomechannel);
             let user = member.user.tag
             let server = member.guild.name
             let embed = new MessageEmbed()
