@@ -17,6 +17,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
     if(!values.includes(value)) {
     db.query("SELECT * FROM `settings` WHERE id = ?", [message.guild.id], async (error, result) => {
         if(result.length == 0) {
+            db.query("INSERT INTO settings (id) VALUES (?)", [message.guild.id])
             let embed = new MessageEmbed()
             .setTitle(`Hina - Config: ${message.guild.name}`)
             .setColor("#3b7fff")

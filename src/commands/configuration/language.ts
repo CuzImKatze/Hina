@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js'
 module.exports.run = async (prefix, cmd, client, args, message) => {
     let db = client.co;
-    if(message.member.hasPermission("ADMINISTRATOR")) {
+    if(!message.member.hasPermission("ADMINISTRATOR")) {
         let embed = new MessageEmbed()
         .setColor("#3b7fff")
     .setTitle(await client.string(message.guild.id, "language.title"))
