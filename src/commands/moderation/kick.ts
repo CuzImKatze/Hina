@@ -32,8 +32,12 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
         .setFooter(await client.string(message.guild.id, "requested") + message.author.username)
         .setTimestamp()
         db.query("SELECT * FROM `settings` WHERE guildid = ?", [message.guild.id], async (error, result) => {
-            if(result.length == 0) return
-            if(result.lenght == "none") { 
+            if(result.length == 0) {
+                message.channel.send(embed)
+                reply.delete()
+                 message.guild.member(target).kick(reason)
+            }
+            if(result.length == "none") { 
             message.channel.send(embed)
             reply.delete()
              message.guild.member(target).kick(reason)
