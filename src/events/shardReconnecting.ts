@@ -4,7 +4,7 @@ module.exports = async(client, id, unavailableGuilds) => {
 let embed = new MessageEmbed()
     .setTitle("Hina - Status")
     .setColor("#3b7fff")
-    .setDescription(`Shard ${id} is reconneting...`)
+    .setDescription(`Shard ${id} is reconnecting...`)
     .setTimestamp()
     return webhook.send(embed)
 }

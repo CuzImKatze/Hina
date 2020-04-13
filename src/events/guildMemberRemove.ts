@@ -11,7 +11,7 @@ module.exports = async (client, member) => {
             let server = member.guild.name
             let embed = new MessageEmbed()
             .setTitle("Leave")
-            .setThumbnail(member.user.avtarURL())
+            .setThumbnail(member.user.avatarURL())
             if(result[0].leavemessage == "none") {
                 embed.setDescription(`${user} just left ${server}!`)
             } else {
