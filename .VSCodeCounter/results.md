@@ -1,48 +1,56 @@
 # Summary
 
-Date : 2020-04-07 15:24:21
+Date : 2020-04-15 13:44:25
 
 Directory c:\Users\SvenM\OneDrive\Dokumente\GitHub\Hina
 
-Total : 61 files,  1919 codes, 34 comments, 49 blanks, all 2002 lines
+Total : 93 files,  2722 codes, 54 comments, 61 blanks, all 2837 lines
 
 [details](details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| JavaScript | 28 | 1,077 | 28 | 0 | 1,105 |
-| TypeScript | 28 | 759 | 6 | 47 | 812 |
-| JSON | 4 | 82 | 0 | 2 | 84 |
+| JavaScript | 44 | 1,535 | 44 | 0 | 1,579 |
+| TypeScript | 43 | 1,054 | 10 | 59 | 1,123 |
+| JSON | 5 | 132 | 0 | 2 | 134 |
 | Markdown | 1 | 1 | 0 | 0 | 1 |
 
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 61 | 1,919 | 34 | 49 | 2,002 |
-| dist | 30 | 1,120 | 28 | 0 | 1,148 |
-| dist\commands | 17 | 801 | 17 | 0 | 818 |
-| dist\commands\administration | 2 | 58 | 2 | 0 | 60 |
-| dist\commands\configuration | 2 | 181 | 2 | 0 | 183 |
-| dist\commands\core | 2 | 72 | 2 | 0 | 74 |
-| dist\commands\developer | 3 | 117 | 3 | 0 | 120 |
-| dist\commands\economy | 4 | 191 | 4 | 0 | 195 |
-| dist\commands\moderation | 2 | 106 | 2 | 0 | 108 |
-| dist\commands\profile | 2 | 76 | 2 | 0 | 78 |
-| dist\events | 6 | 135 | 6 | 0 | 141 |
-| dist\hina | 1 | 43 | 1 | 0 | 44 |
-| dist\language | 1 | 33 | 0 | 0 | 33 |
+| . | 93 | 2,722 | 54 | 61 | 2,837 |
+| dist | 47 | 1,626 | 44 | 0 | 1,670 |
+| dist\commands | 30 | 1,187 | 30 | 0 | 1,217 |
+| dist\commands\administration | 2 | 60 | 2 | 0 | 62 |
+| dist\commands\configuration | 2 | 211 | 2 | 0 | 213 |
+| dist\commands\core | 2 | 80 | 2 | 0 | 82 |
+| dist\commands\developer | 3 | 123 | 3 | 0 | 126 |
+| dist\commands\economy | 4 | 198 | 4 | 0 | 202 |
+| dist\commands\fun | 3 | 72 | 3 | 0 | 75 |
+| dist\commands\interaction | 4 | 100 | 4 | 0 | 104 |
+| dist\commands\moderation | 2 | 138 | 2 | 0 | 140 |
+| dist\commands\profile | 2 | 78 | 2 | 0 | 80 |
+| dist\commands\tamagotchi | 4 | 45 | 4 | 0 | 49 |
+| dist\commands\utilties | 2 | 82 | 2 | 0 | 84 |
+| dist\events | 8 | 207 | 8 | 0 | 215 |
+| dist\hina | 2 | 43 | 2 | 0 | 45 |
+| dist\language | 2 | 81 | 0 | 0 | 81 |
 | dist\utils | 2 | 40 | 2 | 0 | 42 |
-| src | 28 | 759 | 6 | 47 | 812 |
-| src\commands | 17 | 572 | 6 | 25 | 603 |
-| src\commands\administration | 2 | 32 | 0 | 0 | 32 |
-| src\commands\configuration | 2 | 145 | 0 | 8 | 153 |
-| src\commands\core | 2 | 49 | 6 | 1 | 56 |
-| src\commands\developer | 3 | 80 | 0 | 1 | 81 |
-| src\commands\economy | 4 | 137 | 0 | 12 | 149 |
-| src\commands\moderation | 2 | 80 | 0 | 2 | 82 |
-| src\commands\profile | 2 | 49 | 0 | 1 | 50 |
-| src\events | 6 | 70 | 0 | 5 | 75 |
+| src | 43 | 1,054 | 10 | 59 | 1,123 |
+| src\commands | 30 | 822 | 3 | 37 | 862 |
+| src\commands\administration | 2 | 34 | 0 | 0 | 34 |
+| src\commands\configuration | 2 | 173 | 0 | 8 | 181 |
+| src\commands\core | 2 | 57 | 3 | 1 | 61 |
+| src\commands\developer | 3 | 86 | 0 | 1 | 87 |
+| src\commands\economy | 4 | 144 | 0 | 12 | 156 |
+| src\commands\fun | 3 | 39 | 0 | 4 | 43 |
+| src\commands\interaction | 4 | 52 | 0 | 4 | 56 |
+| src\commands\moderation | 2 | 110 | 0 | 2 | 112 |
+| src\commands\profile | 2 | 51 | 0 | 1 | 52 |
+| src\commands\tamagotchi | 4 | 23 | 0 | 2 | 25 |
+| src\commands\utilties | 2 | 53 | 0 | 2 | 55 |
+| src\events | 8 | 115 | 7 | 5 | 127 |
 | src\hina | 1 | 35 | 0 | 4 | 39 |
 | src\utils | 2 | 27 | 0 | 0 | 27 |
 

@@ -22,7 +22,7 @@ module.exports.run = async (prefix, cmd, client, args, message) => {
         embed.addField("Game", "-")
     }
     embed.addField(await client.string(message.guild.id, "userinfo.roles"), user.roles.cache.sort(compare).map(roles => roles).join(", ").substr(0, 900) || `-`, false)
-    embed.addField(await client.string(message.guild.id, "userinfo.created"), moment(user.joinedAt).format("dddd, Do MMMM YYYY, HH:mm:ss"),)
+    embed.addField(await client.string(message.guild.id, "userinfo.created"), moment(user.createdAt).format("dddd, Do MMMM YYYY, HH:mm:ss"),)
     .setFooter(await client.string(message.guild.id, "requested") + message.author.username)
     .setTimestamp()
     return message.channel.send(embed)
