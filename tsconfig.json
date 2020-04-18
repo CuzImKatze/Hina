@@ -6,7 +6,7 @@
         "removeComments": true,
         "strict": false, 
         "skipLibCheck": true,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "noImplicitThis": true,
         "inlineSourceMap": true,
         "resolveJsonModule": true
@@ -17,5 +17,5 @@
     "exclude": [
         "node_modules"
     ]
-
+    
 }

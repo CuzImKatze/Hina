@@ -36,5 +36,10 @@
     "fox.title": "Hina - Fox Image",
     "userinfo.roles": "Roles",
     "userinfo.created": "Created at",
-    "guildinfo.verify": "Verification level"
+    "guildinfo.verify": "Verification level",
+    "tamagotchi.no": "You don't have a Tamagotchi use h+shop to see the available Tamagotchis!",
+    "tamagotchi.select": "Please select one of this items (Cat, Dog, Catfood, Dogfood)",
+    "tamagotchi.already": "You already have a Tamagotchi!",
+    "tamagotchi.name": "Please give your Tamagotchi a name!",
+    "tamagotchi.nocoins": "You don't have enough Coins!"
 }
