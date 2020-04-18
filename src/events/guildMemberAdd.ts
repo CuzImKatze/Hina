@@ -1,29 +1,26 @@
-import { MessageEmbed } from 'discord.js'
-module.exports = async (client, member) => {
-    let db = client.con;
+import { GuildMember, MessageEmbed } from "discord.js";
+import { IHinaClient } from "../hina/HinaClient";
+
+module.exports = async (client: IHinaClient, member: GuildMember) => {
+    const db = client.con;
     db.query("SELECT * FROM `settings` WHERE id = ?", [member.guild.id], async (error, result) => {
-        console.log(1)
-        if(result.length == 0) return
-        console.log(2)
-        if(result[0].welcomechannel == "none") {
-            console.log(3)
-            return
+        if (result.length === 0) { return; }
+        if (result[0].welcomechannel === "none") {
+            return;
         } else {
-            console.log(4)
-            let wec = member.guild.channels.cache.get(result[0].welcomechannel);
-            let user = member.user.tag
-            let server = member.guild.name
-            console.log(5)
-            let embed = new MessageEmbed()
-            .setTitle("Welcome")
-            .setThumbnail(member.user.avatarURL())
-            if(result[0].welcomemessage == "none") {
-                embed.setDescription(`Welcome, ${user} to ${server}!`)
+            const wec: any = member.guild.channels.cache.get(result[0].welcomechannel);
+            const user = member.user.tag;
+            const server = member.guild.name;
+            const embed = new MessageEmbed()
+                .setTitle("Welcome")
+                .setThumbnail(member.user.avatarURL());
+            if (result[0].welcomemessage === "none") {
+                embed.setDescription(`Welcome, ${user} to ${server}!`);
             } else {
-                embed.setDescription((await result[0].welcomemessage).replace("${user}", user).replace("${server}", server))
+                embed.setDescription(
+                    (await result[0].welcomemessage).replace("${user}", user).replace("${server}", server));
             }
-            console.log(6)
-            return wec.send(embed)
+            return wec.send(embed);
         }
-    })
-}
+    });
+};
