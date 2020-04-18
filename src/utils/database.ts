@@ -1,9 +1,9 @@
-import * as mysql from 'mysql2'
-const db = require("../database.json")
+import * as mysql from "mysql2";
+import db = require("../database");
 const con = mysql.createConnection({
-  host: db.host,
-  user: db.user,
-  database: db.database,
-  password: db.password
+    database: db.database,
+    host: db.host,
+    password: db.password,
+    user: db.user,
 });
-module.exports = con;
+export { con };
