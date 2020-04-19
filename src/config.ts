@@ -5,7 +5,7 @@ const config = {
         "over $users Users!",
     ],
     activityType: "WATCHING",
-    prefix: "hd+",
+    prefix: "h+",
     status: "Online",
 };
 
