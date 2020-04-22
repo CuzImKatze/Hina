@@ -15,6 +15,7 @@ module.exports.run = async (prefix: string, cmd: string, client: IHinaClient, ar
     const embed = new MessageEmbed()
         .setTitle(user.user.username)
         .setColor("#3b7fff")
+        .setThumbnail(user.user.avatarURL())
         .addField("Name + Tag", user.user.tag, true)
         .addField("ID", user.id, true)
         .addField("Status", user.user.presence.status, true);
